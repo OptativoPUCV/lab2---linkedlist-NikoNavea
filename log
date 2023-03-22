@@ -16,3 +16,13 @@ list.c:36:8: error: ‘List’ {aka ‘struct List’} has no member named ‘pr
 cc1: all warnings being treated as errors
 Compilation failed
 b9c52f4
+Wed 22 Mar 2023 03:11:31 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:36:8: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   36 |   lista->prev = NULL;
+      |        ^~
+Compilation failed
+aac3acc
