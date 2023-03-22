@@ -26,3 +26,9 @@ list.c:36:8: error: ‘List’ {aka ‘struct List’} has no member named ‘pr
       |        ^~
 Compilation failed
 aac3acc
+Wed 22 Mar 2023 03:11:42 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+8ccb052
