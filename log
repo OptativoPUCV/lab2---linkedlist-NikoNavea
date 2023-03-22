@@ -2,3 +2,17 @@ Wed 22 Mar 2023 02:59:10 AM UTC:
  tests:  0|6
 total_score: 0/70
 f736123
+Wed 22 Mar 2023 03:11:23 AM UTC: 
+ list.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:35:15: error: statement with no effect [-Werror=unused-value]
+   35 |   lista->head == NULL;
+      |               ^
+list.c:36:8: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   36 |   lista->prev == NULL;
+      |        ^~
+cc1: all warnings being treated as errors
+Compilation failed
+b9c52f4
