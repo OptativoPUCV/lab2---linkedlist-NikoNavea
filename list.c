@@ -90,7 +90,7 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-  if (list == NULL || list->currrent == NULL) return;
+  if (list == NULL || list->current == NULL) return;
   Node* n = createNode(data);
   if(list->current == list-> tail) {
     n->prev = list->current;
