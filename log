@@ -93,3 +93,16 @@ list.c:73:23: error: expected ‘;’ before ‘if’
 cc1: all warnings being treated as errors
 Compilation failed
 2c0d14f
+Sat 25 Mar 2023 06:18:02 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:72:13: error: implicit declaration of function ‘createnode’; did you mean ‘createNode’? [-Werror=implicit-function-declaration]
+   72 |   Node* n = createnode(data);
+      |             ^~~~~~~~~~
+      |             createNode
+list.c:72:13: error: initialization of ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+cc1: all warnings being treated as errors
+Compilation failed
+f0db5c2
