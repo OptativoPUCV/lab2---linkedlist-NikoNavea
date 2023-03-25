@@ -155,3 +155,27 @@ Sat 25 Mar 2023 07:25:59 PM UTC:
  tests:  11|1
 total_score: 55/70
 a25152b
+Sat 25 Mar 2023 08:06:08 PM UTC: 
+ list.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:119:45: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+  119 |   if(list == NULL || list->current == NULL) return;
+      |                                             ^~~~~~
+list.c:118:8: note: declared here
+  118 | void * popCurrent(List * list) {
+      |        ^~~~~~~~~~
+list.c:120:31: error: ‘Node’ has no member named ‘dato’; did you mean ‘data’?
+  120 |   void* dato = list->current->dato;
+      |                               ^~~~
+      |                               data
+list.c:122:9: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+  122 |     list->prev->next = list->next;
+      |         ^~
+list.c:122:28: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+  122 |     list->prev->next = list->next;
+      |                            ^~
+cc1: all warnings being treated as errors
+Compilation failed
+06403aa

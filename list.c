@@ -106,21 +106,32 @@ void pushCurrent(List * list, void * data) {
 }
 
 void * popFront(List * list) {
-    list->current = list->head;
-    return popCurrent(list);
+  list->current = list->head;
+  return popCurrent(list);
 }
 
 void * popBack(List * list) {
-    list->current = list->tail;
-    return popCurrent(list);
+  list->current = list->tail;
+  return popCurrent(list);
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+  if(list == NULL || list->current == NULL) return;
+  void* dato = list->current->dato;
+  if(list->current->prev != NULL){
+    list->prev->next = list->next;
+  }
+  else{
+    list->head = list->current->next;
+  }
+  if(list->current->next == NULL){
+    list->current->next->prev = list->current->prev;
+  }
+  return dato;
 }
 
 void cleanList(List * list) {
-    while (list->head != NULL) {
-        popFront(list);
-    }
+  while (list->head != NULL) {
+    popFront(list);
+  }
 }
