@@ -138,3 +138,14 @@ Sat 25 Mar 2023 07:12:20 PM UTC:
  tests:  10|2
 total_score: 45/70
 49bfb46
+Sat 25 Mar 2023 07:25:37 PM UTC: 
+ list.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:93:29: error: ‘List’ {aka ‘struct List’} has no member named ‘currrent’; did you mean ‘current’?
+   93 |   if (list == NULL || list->currrent == NULL) return;
+      |                             ^~~~~~~~
+      |                             current
+Compilation failed
+7d51912
